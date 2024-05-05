@@ -25,7 +25,7 @@ percent = 0.95  # 流量限额，1表示使用到100%关机，默认设置为95%
 
 #推送配置
 def qmsg_send(msg):
-    global qmsgurl, qkey, qun
+    global qmsgurl, qkey, qq, bot
     if qmsgurl == '':
         qmsgurl = https://qmsg.zendee.cn
     if qkey == '':
@@ -40,7 +40,7 @@ def qmsg_send(msg):
     requests.post(qmsg_url, data = data)
 #Qmsg酱QQ群推送
 def qmsg_group(msg):
-    global qmsgurl, qkey, qun
+    global qmsgurl, qkey, qun, bot
     if qmsgurl == '':
         qmsgurl = https://qmsg.zendee.cn
     if qkey == '':
